@@ -6,20 +6,18 @@
     <div>
       <h1><a href="">Django Girls blog</a></h1>
     </div>
+    {% for post in posts %}
+<div>
+  <p>
+    published: {{post.published_date}}
+  </p>
+  <h1><a href="">{{post.title}}</a></h1>
+  <p>
+    {{post.text|linebreaks}}
+  </p>
+    
+  {% endfor %}
 
-    <div>
-      <p>published 08-04-2016</p>
-      <h2><a href="">My first post</a></h2>
-      <p>Pora na kolejne ćwiczenie, które powinno pokazać Ci filozofię pisania bardziej zaawansowanych stron internetowych w HTML5.</p>
-    </div>
-
-    <div>
-      <p>published 09-04-2016</p>
-      <h2><a href=""> My second post</a></h2>
-      <p>Spróbujmy uzyskać poniższy efekt. Uznajmy, że jest to artykuł na bloga.
-
-      </p>
-    </div>
-
+</div>
 </body>
   </html>
